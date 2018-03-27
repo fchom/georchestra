@@ -81,7 +81,7 @@ public class HomeController {
             List<String> rolesList = Arrays.asList(roles.split(";"));
 
             if (rolesList.contains("ROLE_SUPERUSER")) {
-                redirectUrl = "/console/";
+                redirectUrl = "/";
             } else {
                 redirectUrl = "/account/userdetails";
             }

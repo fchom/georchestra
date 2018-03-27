@@ -53,9 +53,9 @@ angular.module('admin_console', [
 ])
 .controller('AppController', AppController)
 .controller('StandaloneController', StandaloneController)
-.constant('LDAP_ROOT_URI', '/console/')
-.constant('LDAP_BASE_URI', '/console/private/')
-.constant('LDAP_PUBLIC_URI', '/console/public/')
+.constant('LDAP_ROOT_URI', '/')
+.constant('LDAP_BASE_URI', '/private/')
+.constant('LDAP_PUBLIC_URI', '/public/')
 .constant('MF_BASE_URI', '/mapfishapp/ws/')
 .constant('ANALYTICS_BASE_URI', '/analytics/ws/')
 .config([
@@ -69,7 +69,7 @@ angular.module('admin_console', [
     (name) => 'components/' + name + '/' + name + '.tpl.html')
     $translate
     .useSanitizeValueStrategy('escape')
-    .useStaticFilesLoader({ prefix: $uri + 'console/public/lang/', suffix: '.json' })
+    .useStaticFilesLoader({ prefix: $uri + 'public/lang/', suffix: '.json' })
     .registerAvailableLanguageKeys(['en', 'fr'], {
       'en_*': 'en',
       'fr_*': 'fr',
